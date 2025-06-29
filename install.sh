@@ -27,6 +27,11 @@ echo -e "${NC}"
 echo -e "${GREEN}Welcome to AugmentedClaude Installer!${NC}"
 echo ""
 
+# Check if running through pipe (non-interactive)
+if [ ! -t 0 ]; then
+    echo -e "${YELLOW}Note: Running in non-interactive mode${NC}"
+fi
+
 # Function to check if a command exists
 command_exists() {
     command -v "$1" >/dev/null 2>&1
@@ -78,8 +83,13 @@ fi
 if ! command_exists claude; then
     echo -e "${YELLOW}⚠ Claude CLI is not installed${NC}"
     echo ""
-    read -p "Would you like to install Claude CLI now? (recommended) [Y/n] " -n 1 -r
-    echo ""
+    if [ -t 0 ]; then
+        read -p "Would you like to install Claude CLI now? (recommended) [Y/n] " -n 1 -r
+        echo ""
+    else
+        REPLY="Y"
+        echo "Auto-installing Claude CLI in non-interactive mode..."
+    fi
     if [[ ! $REPLY =~ ^[Nn]$ ]]; then
         echo -e "${BLUE}Installing Claude CLI...${NC}"
         npm install -g @anthropic-ai/claude-cli
@@ -102,14 +112,24 @@ echo ""
 echo -e "${BLUE}Setting up AugmentedClaude...${NC}"
 
 # Get project directory
-read -p "Enter project directory name [$DEFAULT_DIR]: " PROJECT_DIR
-PROJECT_DIR=${PROJECT_DIR:-$DEFAULT_DIR}
+if [ -t 0 ]; then
+    read -p "Enter project directory name [$DEFAULT_DIR]: " PROJECT_DIR
+    PROJECT_DIR=${PROJECT_DIR:-$DEFAULT_DIR}
+else
+    PROJECT_DIR=$DEFAULT_DIR
+    echo "Using default directory: $PROJECT_DIR"
+fi
 
 # Check if directory exists
 if [ -d "$PROJECT_DIR" ]; then
     echo -e "${RED}✗ Directory '$PROJECT_DIR' already exists${NC}"
-    read -p "Do you want to overwrite it? [y/N] " -n 1 -r
-    echo ""
+    if [ -t 0 ]; then
+        read -p "Do you want to overwrite it? [y/N] " -n 1 -r
+        echo ""
+    else
+        REPLY="N"
+        echo "Cannot overwrite in non-interactive mode. Please remove the directory first."
+    fi
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
         echo "Installation cancelled."
         exit 1
@@ -119,15 +139,20 @@ fi
 
 # Clone repository
 echo -e "${BLUE}Cloning AugmentedClaude repository...${NC}"
-git clone "$REPO_URL" "$PROJECT_DIR"
+git clone "$REPO_URL" "${PROJECT_DIR:-$DEFAULT_DIR}"
 
 # Enter directory
-cd "$PROJECT_DIR"
+cd "${PROJECT_DIR:-$DEFAULT_DIR}"
 
 # Optional npm install
 echo ""
-read -p "Install optional MCP dependencies? (recommended for full features) [Y/n] " -n 1 -r
-echo ""
+if [ -t 0 ]; then
+    read -p "Install optional MCP dependencies? (recommended for full features) [Y/n] " -n 1 -r
+    echo ""
+else
+    REPLY="Y"
+    echo "Auto-installing dependencies in non-interactive mode..."
+fi
 if [[ ! $REPLY =~ ^[Nn]$ ]]; then
     echo -e "${BLUE}Installing dependencies...${NC}"
     npm install
@@ -142,7 +167,7 @@ echo ""
 echo -e "${GREEN}🎉 AugmentedClaude installation complete!${NC}"
 echo ""
 echo -e "${BLUE}Next steps:${NC}"
-echo -e "1. ${YELLOW}cd $PROJECT_DIR${NC}"
+echo -e "1. ${YELLOW}cd ${PROJECT_DIR:-$DEFAULT_DIR}${NC}"
 echo -e "2. ${YELLOW}claude${NC}"
 echo -e "3. Start using natural language commands like:"
 echo -e "   - ${GREEN}\"Build a React dashboard\"${NC}"
