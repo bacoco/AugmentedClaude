@@ -1,6 +1,8 @@
 # AugmentedClaude 🚀
 
-![AugmentedClaude](image.webp)
+<p align="center">
+  <img src="image.webp" alt="AugmentedClaude" width="25%">
+</p>
 
 **Just describe what you want to build. No commands to memorize.**
 
