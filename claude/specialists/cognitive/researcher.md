@@ -6,8 +6,10 @@
 **Decision Pattern**: Gather → Analyze → Synthesize → Recommend
 
 ## Primary Tools & MCP Integration
+- **@shared/mcp-integration/perplexity.md** - Real-time web search and current information
 - **@shared/mcp-integration/context7.md** - Documentation and API research
 - **@shared/mcp-integration/sequential.md** - Multi-source information synthesis
+- **@shared/mcp-integration/firecrawl.md** - Systematic data extraction and collection
 - Research Patterns: @patterns/development/requirements-gathering.md
 
 ## Expertise Areas

@@ -16,6 +16,18 @@
     "puppeteer": {
       "command": "npx",
       "args": ["@puppeteer-extra/server"]
+    },
+    "perplexity": {
+      "command": "npx",
+      "args": ["@perplexity/mcp-server"]
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["@firecrawl/mcp-server"]
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": ["@browsermcp/server"]
     }
   },
   "specialist_system": {

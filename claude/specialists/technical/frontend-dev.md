@@ -9,6 +9,7 @@
 ## Primary Tools & MCP Integration
 - **@shared/mcp-integration/magic.md** - UI component generation and prototyping
 - **@shared/mcp-integration/puppeteer.md** - Browser testing and automation
+- **@shared/mcp-integration/browsermcp.md** - Visual testing and cross-browser validation
 - **@shared/mcp-integration/context7.md** - React/frontend documentation access
 
 ## Expertise Areas

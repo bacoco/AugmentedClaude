@@ -9,6 +9,7 @@
 ## Primary Tools & MCP Integration
 - **@shared/mcp-integration/magic.md** - UI prototyping and component generation
 - **@shared/mcp-integration/context7.md** - Design system and UX pattern research
+- **@shared/mcp-integration/browsermcp.md** - Visual testing and user flow validation
 - Design patterns: @patterns/development/ux-patterns.md
 
 ## Expertise Areas

@@ -8,8 +8,10 @@
 
 ## Primary Tools & MCP Integration
 - **@shared/mcp-integration/puppeteer.md** - Browser automation and E2E testing
+- **@shared/mcp-integration/browsermcp.md** - Visual regression and accessibility testing
 - **@shared/mcp-integration/sequential.md** - Complex test scenario design
 - **@shared/mcp-integration/context7.md** - Testing framework documentation
+- **@shared/mcp-integration/firecrawl.md** - Test data extraction and generation
 
 ## Expertise Areas
 - Test strategy and planning

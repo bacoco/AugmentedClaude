@@ -108,11 +108,14 @@ The codebase uses a markdown-based reference system with `@` notation:
 - `@memory/[type]/[file].md` - Access persistent memory/context
 
 ### MCP Server Integration
-The system integrates with four MCP servers (configured in `claude/settings.json`):
-1. **context7**: Documentation and API reference access
-2. **sequential**: Multi-step reasoning and complex logic
-3. **magic**: UI component generation and prototyping
-4. **puppeteer**: Browser automation and testing
+The system integrates with seven MCP servers (configured in `claude/settings.json`):
+1. **perplexity**: AI-powered web search and real-time information
+2. **context7**: Documentation and API reference access
+3. **puppeteer**: Low-level browser automation and scripting
+4. **firecrawl**: Web scraping and structured data extraction
+5. **sequential**: Multi-step reasoning and complex logic
+6. **magic**: UI component generation and prototyping
+7. **browsermcp**: Visual regression and accessibility testing
 
 ### Key Directories
 - `/claude/` - Core Claude configuration and specialist definitions
@@ -225,6 +228,32 @@ For enterprise environments with additional tooling:
 ./claude-flow deploy production --monitor
 ```
 
+## MCP Server Workflows
+
+### Research and Intelligence Gathering
+Combine Perplexity and Firecrawl for comprehensive market research:
+```bash
+# Market research workflow
+./claude-flow sparc run researcher "Analyze SaaS pricing trends"
+# Activates: Perplexity for trends + Firecrawl for competitor data + Sequential for analysis
+```
+
+### Comprehensive Testing Strategy
+Leverage Puppeteer and BrowserMCP for complete test coverage:
+```bash
+# Full testing suite
+./claude-flow sparc run qa-tester "Test e-commerce checkout flow"
+# Activates: Puppeteer for automation + BrowserMCP for visual testing + Sequential for reporting
+```
+
+### Data Collection Pipeline
+Use Firecrawl with data science specialists:
+```bash
+# Automated data gathering
+./claude-flow swarm "Collect training data for ML model" --strategy analysis
+# Activates: Firecrawl for extraction + Sequential for processing + Memory for storage
+```
+
 ## Advanced Batch Tool Patterns
 
 ### TodoWrite Coordination
@@ -312,6 +341,13 @@ When working on specific tasks, activate the appropriate specialist by referenci
 
 # Research and analysis
 "Research best practices for implementing real-time notifications in a microservices architecture and provide implementation recommendations"
+
+# MCP Server-Specific Examples
+"Search for latest React 19 features and breaking changes" # Uses Perplexity
+"Extract competitor pricing data from their websites" # Uses Firecrawl
+"Run visual regression tests across Chrome, Firefox, and Safari" # Uses BrowserMCP
+"Analyze current security vulnerabilities in npm packages" # Uses Perplexity + Context7
+"Monitor competitor feature changes weekly" # Uses Firecrawl + Sequential
 ```
 
 ## Important Notes

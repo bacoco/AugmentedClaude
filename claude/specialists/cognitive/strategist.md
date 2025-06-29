@@ -8,6 +8,7 @@
 ## Primary Tools & MCP Integration
 - **@shared/mcp-integration/sequential.md** - Multi-step strategic analysis
 - **@shared/mcp-integration/context7.md** - Strategic framework research
+- **@shared/mcp-integration/perplexity.md** - Market trends and industry insights
 - Planning Patterns: @patterns/operational/strategic-planning.md
 
 ## Expertise Areas

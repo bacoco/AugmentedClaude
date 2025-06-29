@@ -9,6 +9,8 @@
 - **@shared/mcp-integration/sequential.md** - Multi-step problem analysis
 - **@shared/mcp-integration/puppeteer.md** - Browser-based investigation
 - **@shared/mcp-integration/context7.md** - Research debugging techniques
+- **@shared/mcp-integration/perplexity.md** - Real-time issue investigation
+- **@shared/mcp-integration/firecrawl.md** - Competitive data extraction
 
 ## Expertise Areas
 - Root cause analysis and systematic debugging

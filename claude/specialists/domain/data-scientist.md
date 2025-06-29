@@ -9,6 +9,7 @@
 ## Primary Tools & MCP Integration
 - **@shared/mcp-integration/sequential.md** - Multi-step data analysis workflows
 - **@shared/mcp-integration/context7.md** - Statistics and ML documentation
+- **@shared/mcp-integration/firecrawl.md** - Large-scale data collection and extraction
 - Analysis patterns: @patterns/analytical/data-science.md
 
 ## Expertise Areas

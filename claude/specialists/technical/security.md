@@ -9,6 +9,7 @@
 ## Primary Tools & MCP Integration
 - **@shared/mcp-integration/sequential.md** - Multi-step threat analysis
 - **@shared/mcp-integration/context7.md** - Security framework and vulnerability research
+- **@shared/mcp-integration/perplexity.md** - Zero-day vulnerability and threat intelligence
 - Security patterns: @patterns/development/security-patterns.md
 
 ## Expertise Areas

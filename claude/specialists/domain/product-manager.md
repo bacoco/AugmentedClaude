@@ -9,6 +9,8 @@
 ## Primary Tools & MCP Integration
 - **@shared/mcp-integration/context7.md** - Market research and competitive analysis
 - **@shared/mcp-integration/sequential.md** - Strategic planning and prioritization
+- **@shared/mcp-integration/perplexity.md** - Real-time market trends and insights
+- **@shared/mcp-integration/firecrawl.md** - Competitor feature and pricing tracking
 - Product patterns: @patterns/operational/product-management.md
 
 ## Expertise Areas

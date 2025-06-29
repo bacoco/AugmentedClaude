@@ -188,7 +188,7 @@ install_dependencies() {
     
     # Install MCP servers
     print_warning "Installing MCP servers..."
-    npm install --save-dev @context7/server @sequential-thinking/server @magic-ui/server @puppeteer-extra/server 2>/dev/null || {
+    npm install --save-dev @context7/server @sequential-thinking/server @magic-ui/server @puppeteer-extra/server @perplexity/mcp-server @firecrawl/mcp-server @browsermcp/server 2>/dev/null || {
         print_warning "Some MCP servers may not be available in npm registry"
         print_warning "You may need to install them manually or use alternative packages"
     }
