@@ -157,8 +157,8 @@ Contributions welcome! The orchestrator can be extended with new patterns, workf
 
 This project integrates and builds upon the excellent work of:
 
-- **[SuperClaude](https://github.com/Ejb503/SuperClaude)** - The powerful command framework that powers our natural language orchestration. All SuperClaude code has been integrated into the `.claude/` directory structure.
-- **[claude-flow](https://github.com/pchaganti/ai-claude-flow)** - Multi-agent orchestration capabilities available through MCP server integration.
+- **[SuperClaude](https://github.com/NomenAK/SuperClaude)** - The powerful command framework that powers our natural language orchestration. All SuperClaude code has been integrated into the `.claude/` directory structure.
+- **[claude-code-flow](https://github.com/ruvnet/claude-code-flow)** - Multi-agent orchestration capabilities available through MCP server integration.
 
 Special thanks to the creators and contributors of these projects for their innovative approaches to AI-assisted development.
 
