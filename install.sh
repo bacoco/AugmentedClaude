@@ -139,36 +139,63 @@ if [ -d "$PROJECT_DIR" ]; then
     rm -rf "$PROJECT_DIR"
 fi
 
-# Clone repository
-echo -e "${BLUE}Cloning AugmentedClaude repository...${NC}"
+# Create target directory
 TARGET_DIR="${PROJECT_DIR:-$DEFAULT_DIR}"
-echo "Installing to: $TARGET_DIR"
-git clone "$REPO_URL" "$TARGET_DIR"
+echo -e "${BLUE}Creating directory: $TARGET_DIR${NC}"
+mkdir -p "$TARGET_DIR"
+
+# Clone to temp directory and copy only essential files
+TEMP_DIR=$(mktemp -d)
+echo -e "${BLUE}Downloading AugmentedClaude...${NC}"
+git clone --quiet "$REPO_URL" "$TEMP_DIR/augmented" 2>/dev/null
+
+# Copy only essential files
+echo -e "${BLUE}Installing essential files...${NC}"
+cp -r "$TEMP_DIR/augmented/.claude" "$TARGET_DIR/"
+cp "$TEMP_DIR/augmented/CLAUDE.md" "$TARGET_DIR/" 2>/dev/null || true
+cp "$TEMP_DIR/augmented/HOW_TO_USE.md" "$TARGET_DIR/" 2>/dev/null || true
+cp "$TEMP_DIR/augmented/README.md" "$TARGET_DIR/" 2>/dev/null || true
+cp "$TEMP_DIR/augmented/package.json" "$TARGET_DIR/" 2>/dev/null || true
+
+# Clean up temp directory
+rm -rf "$TEMP_DIR"
 
 # Enter directory
 cd "$TARGET_DIR"
+echo -e "${GREEN}✓ Essential files installed${NC}"
 
-# Optional npm install
-echo ""
-if [ -t 0 ]; then
-    read -p "Install optional MCP dependencies? (recommended for full features) [Y/n] " -n 1 -r
+# Optional npm install (only if package.json exists)
+if [ -f "package.json" ]; then
     echo ""
-else
-    REPLY="Y"
-    echo "Auto-installing dependencies in non-interactive mode..."
-fi
-if [[ ! $REPLY =~ ^[Nn]$ ]]; then
-    echo -e "${BLUE}Installing dependencies...${NC}"
-    npm install
-    echo -e "${GREEN}✓ Dependencies installed${NC}"
-else
-    echo -e "${YELLOW}⚠ Skipping dependency installation${NC}"
-    echo "You can install them later with: npm install"
+    if [ -t 0 ]; then
+        read -p "Install optional MCP dependencies? (recommended for full features) [Y/n] " -n 1 -r
+        echo ""
+    else
+        REPLY="Y"
+        echo "Auto-installing dependencies in non-interactive mode..."
+    fi
+    if [[ ! $REPLY =~ ^[Nn]$ ]]; then
+        echo -e "${BLUE}Installing dependencies...${NC}"
+        npm install
+        echo -e "${GREEN}✓ Dependencies installed${NC}"
+    else
+        echo -e "${YELLOW}⚠ Skipping dependency installation${NC}"
+        echo "You can install them later with: npm install"
+    fi
 fi
 
 # Success message
 echo ""
 echo -e "${GREEN}🎉 AugmentedClaude installation complete!${NC}"
+echo ""
+echo -e "${BLUE}Installed files:${NC}"
+echo "  ✓ .claude/ (orchestration logic)"
+echo "  ✓ CLAUDE.md (configuration)"
+echo "  ✓ HOW_TO_USE.md (documentation)"
+echo "  ✓ README.md (overview)"
+if [ -f "package.json" ]; then
+    echo "  ✓ package.json (MCP dependencies)"
+fi
 echo ""
 echo -e "${BLUE}Next steps:${NC}"
 echo -e "1. ${YELLOW}cd $TARGET_DIR${NC}"
