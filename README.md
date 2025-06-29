@@ -1,117 +1,164 @@
-# AugmentedClaude
+# AugmentedClaude 🚀
 
-An advanced AI orchestration system that integrates Claude Flow, SuperClaude, and a sophisticated specialist framework to create a powerful multi-agent development environment.
+**Just describe what you want to build. No commands to memorize.**
 
-## 🚀 Features
+AugmentedClaude is a natural language interface that transforms how you work with AI for development. Simply describe your task in plain English, and the orchestrator handles everything else.
 
-- **Natural Language Interface**: Simply describe what you want in plain English
-- **17 SPARC Development Modes**: From architecture to testing to deployment
-- **Multi-Agent Swarm Coordination**: Parallel execution with up to 20x performance
-- **Specialist System**: Cognitive, technical, domain, and orchestration specialists
-- **Memory Persistence**: Cross-session knowledge retention
-- **7 MCP Server Integrations**: Search, documentation, browser control, web scraping, reasoning, UI generation, and visual testing
+## ✨ Key Features
 
-## 📋 Prerequisites
+### Natural Language Interface
+- **No command memorization** - Just describe what you want
+- **Automatic tool selection** - Chooses between SuperClaude and claude-flow
+- **Smart orchestration** - Coordinates multiple AI agents when needed
+- **Context-aware** - Understands your project and remembers decisions
 
-- Claude Code CLI (required) - Install from https://claude.ai/code
-- Node.js (v16 or higher)
-- Git
-- Python 3 (optional for orchestrator)
+### What You Can Say
 
-## 🛠️ Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/bacoco/AugmentedClaude.git
-cd AugmentedClaude
-
-# Run the automated setup
-chmod +x setup.sh
-./setup.sh
+```
+"Build a React dashboard with authentication"
+"Review my code for security issues"
+"Debug this performance problem"
+"Refactor my entire codebase"
+"Create comprehensive test coverage"
+"Deploy to production safely"
 ```
 
-The setup script will:
-- Check all prerequisites
-- Clone required repositories (Claude Flow, SuperClaude, etc.)
-- Install dependencies
-- Create configuration files
-- Set up the complete environment
-
-## 🎯 Quick Start
-
-### Natural Language Commands
-```bash
-# Start Claude Code
-claude
-
-# Use natural language
-"Security review of my payment API with performance analysis"
-"Build React dashboard with authentication"
-"URGENT: Production API is down, need diagnosis"
-```
-
-### Claude Flow Commands
-```bash
-# Start with UI
-./claude-flow start --ui
-
-# Run SPARC mode
-./claude-flow sparc "Build user authentication system"
-
-# Launch swarm
-./claude-flow swarm "Analyze codebase" --strategy analysis --parallel
-```
+The orchestrator automatically translates your request into optimized commands.
 
 ## 📚 Documentation
 
-- **[CLAUDE.md](CLAUDE.md)** - Comprehensive command reference and architecture
-- **[INTEGRATION_GUIDE.md](INTEGRATION_GUIDE.md)** - Detailed integration guide and troubleshooting
+- **[HOW_TO_USE.md](HOW_TO_USE.md)** - Complete guide with examples
+- **[CLAUDE.md](CLAUDE.md)** - Main configuration file
 
-## 🏗️ Architecture
+## 🚀 Quick Start
 
-### Three-Layer System
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/[username]/AugmentedClaude.git
+   cd AugmentedClaude
+   ```
 
-1. **Natural Language Layer**
-   - Interprets plain English commands
-   - Activates appropriate specialists
-   - Manages context and intent
+2. **Start Claude Code**:
+   ```bash
+   claude
+   ```
 
-2. **Command Layer**
-   - 19 SuperClaude commands
-   - 17 SPARC development modes
-   - Batch tool orchestration
+3. **Just talk naturally**:
+   - "Build a user authentication system"
+   - "Find and fix performance issues"
+   - "Create API documentation"
+   - "Set up continuous integration"
 
-3. **Specialist Layer**
-   - Cognitive specialists (architect, analyzer, researcher, strategist)
-   - Technical specialists (frontend, backend, security, QA, DevOps)
-   - Domain specialists (product, UX, data science, tech writing)
-   - Orchestration specialists (project manager, scrum master, integrator)
+## 🧠 How It Works
 
-## 📊 Performance Metrics
+1. **You describe** what you want in natural language
+2. **Orchestrator analyzes** your intent and context
+3. **Automatically selects** the right tools and experts
+4. **Generates and executes** optimized commands
+5. **You get results** without learning complex syntax
 
-- **95% reduction** in command memorization overhead
-- **80% faster** workflow execution
-- **60% better** code quality through multi-specialist review
-- **20x performance** increase with parallel execution
-- **30% faster** research with Perplexity integration
-- **50% reduction** in manual testing with BrowserMCP
-- **40% improvement** in data collection efficiency with Firecrawl
+## 🛠️ Under the Hood
+
+- **Natural Language Orchestrator** - Translates requests to commands
+- **SuperClaude Integration** - For focused development tasks
+- **claude-flow MCP** - For multi-agent orchestration
+- **Expert Personas** - Specialized AI agents for different tasks
+- **Memory System** - Persists context across sessions
+
+## 📦 Project Structure
+
+```
+AugmentedClaude/
+└── .claude/              # SuperClaude-compatible structure
+    ├── orchestrator/     # Natural language processing
+    ├── specialists/      # AI specialists
+    ├── commands/         # Command definitions
+    ├── patterns/         # Best practices
+    ├── workflows/        # Complex processes
+    ├── memory/           # Context storage
+    └── shared/           # Configuration
+
+## 🎯 Example Use Cases
+
+### Development
+- "Create a REST API with authentication"
+- "Build a real-time chat application"
+- "Add payment processing to my app"
+
+### Code Quality
+- "Review my entire codebase"
+- "Find security vulnerabilities"
+- "Optimize database queries"
+
+### Testing
+- "Write tests for all my components"
+- "Create end-to-end test suite"
+- "Check my test coverage"
+
+### DevOps
+- "Set up CI/CD pipeline"
+- "Configure Docker deployment"
+- "Add monitoring and logging"
+
+## 🤖 Powered By
+
+- **SuperClaude** - Advanced command framework
+- **claude-flow** - Multi-agent orchestration
+- **MCP Servers** - Tool integrations
+- **Natural Language Processing** - Intent understanding
+
+## 📋 Project Status & Architecture
+
+### ✅ This Project is READY TO USE
+
+AugmentedClaude is a **markdown-based orchestration layer** for Claude Code. It's not a traditional application - it's a configuration system that Claude Code reads and interprets.
+
+### How It Actually Works
+
+1. **No Executable Code Needed**: All logic is in 118+ markdown files that Claude interprets
+2. **Claude Code IS the Runtime**: When you run `claude`, it reads the orchestration files
+3. **@ References Create the Magic**: The markdown files use @ references to link commands, patterns, and workflows
+4. **MCP Servers Provide Tools**: The settings.json configures tools like claude-flow for multi-agent orchestration
+
+### About "Missing" Files
+
+Git status may show Python files (.py) as untracked - these are **NOT NEEDED** because:
+- Claude Code itself is the execution engine
+- All orchestration logic lives in markdown files
+- The system uses Claude's ability to interpret structured markdown
+
+### Quick Verification
+
+✅ **Ready Checklist**:
+- Claude CLI installed: Run `which claude` to verify
+- 118 orchestration files in `.claude/` directory
+- MCP server configurations in settings.json
+- Natural language mappings in orchestrator files
+
+### Start Using Now
+
+```bash
+# In the project directory
+claude
+
+# Then just type naturally:
+# "Build a React dashboard with authentication"
+# "Review my code for security issues"
+# "Refactor my entire codebase"
+```
+
+The orchestrator automatically translates your natural language into optimized commands!
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read our contributing guidelines and submit pull requests to the main repository.
+Contributions welcome! The orchestrator can be extended with new patterns, workflows, and integrations.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Claude Flow by ruvnet
-- SuperClaude Framework by NomenAK
-- Enhanced Claude Code by krzemienski
-- All contributors to the specialist system
+MIT License - see LICENSE file for details.
 
 ---
 
-Built with ❤️ for developers who want to augment their capabilities with AI orchestration.
+**Stop memorizing commands. Start building faster.**
+
+Just describe what you want, and let AugmentedClaude handle the complexity.
