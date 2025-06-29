@@ -21,9 +21,7 @@
     "mcp:install": "npm install --save-optional claude-flow@latest",
     "mcp:list": "claude mcp list"
   },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.1.0"
-  },
+  "dependencies": {},
   "optionalDependencies": {
     "claude-flow": "latest",
     "@upstash/context7-mcp": "latest",

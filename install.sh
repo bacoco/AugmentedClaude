@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# AugmentedClaude Easy Installer
+# AugmentedClaude Easy Installer v2.0
 # https://github.com/bacoco/AugmentedClaude
+# Fixed npm dependencies and directory creation
 
 set -e  # Exit on error
 
@@ -176,8 +177,12 @@ if [ -f "package.json" ]; then
     fi
     if [[ ! $REPLY =~ ^[Nn]$ ]]; then
         echo -e "${BLUE}Installing dependencies...${NC}"
-        npm install
-        echo -e "${GREEN}✓ Dependencies installed${NC}"
+        if npm install --no-save 2>/dev/null; then
+            echo -e "${GREEN}✓ Dependencies installed${NC}"
+        else
+            echo -e "${YELLOW}⚠ Some optional dependencies could not be installed${NC}"
+            echo "This is normal - AugmentedClaude will still work!"
+        fi
     else
         echo -e "${YELLOW}⚠ Skipping dependency installation${NC}"
         echo "You can install them later with: npm install"
