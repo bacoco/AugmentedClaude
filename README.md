@@ -34,6 +34,7 @@ The orchestrator automatically translates your request into optimized commands.
 - **[HOW_TO_USE.md](HOW_TO_USE.md)** - Complete guide with examples
 - **[CLAUDE.md](CLAUDE.md)** - Main configuration file
 - **[THINKING_MODE_FIX.md](THINKING_MODE_FIX.md)** - Fix for "thinking mode not supported" error
+- **[VERIFY_ORCHESTRATOR.md](VERIFY_ORCHESTRATOR.md)** - How to verify the orchestrator is working
 
 ## 🚀 Installation
 
