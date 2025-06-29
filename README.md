@@ -48,6 +48,9 @@ curl -sSL https://raw.githubusercontent.com/bacoco/AugmentedClaude/main/install.
 
 # Or if you prefer wget
 wget -qO- https://raw.githubusercontent.com/bacoco/AugmentedClaude/main/install.sh | bash
+
+# If you see old behavior, force refresh:
+curl -H 'Cache-Control: no-cache' -sSL https://raw.githubusercontent.com/bacoco/AugmentedClaude/main/install.sh | bash
 ```
 
 The installer will:
