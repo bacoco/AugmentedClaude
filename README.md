@@ -53,7 +53,7 @@ wget -qO- https://raw.githubusercontent.com/bacoco/AugmentedClaude/main/install.
 The installer will:
 - Check all prerequisites (git, Node.js, Claude CLI)
 - Offer to install Claude CLI if needed
-- Clone the repository to a directory of your choice
+- Install only essential files (no clutter!)
 - Optionally install MCP dependencies
 - Provide clear next steps
 
