@@ -33,7 +33,6 @@ The orchestrator automatically translates your request into optimized commands.
 
 - **[HOW_TO_USE.md](HOW_TO_USE.md)** - Complete guide with examples
 - **[CLAUDE.md](CLAUDE.md)** - Main configuration file
-- **[THINKING_MODE_FIX.md](THINKING_MODE_FIX.md)** - Fix for "thinking mode not supported" error
 - **[VERIFY_ORCHESTRATOR.md](VERIFY_ORCHESTRATOR.md)** - How to verify the orchestrator is working
 
 ## 🚀 Installation
@@ -154,8 +153,6 @@ AugmentedClaude/
 ### ✅ This Project is READY TO USE
 
 AugmentedClaude is a **markdown-based orchestration layer** for Claude Code. It's not a traditional application - it's a configuration system that Claude Code reads and interprets.
-
-**Update**: Fixed compatibility with claude-3-5-sonnet model by removing unsupported thinking mode features.
 
 ### How It Actually Works
 
