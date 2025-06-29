@@ -44,3 +44,7 @@ temp/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# Development source directories (kept for reference but not tracked)
+SuperClaudeOrchestrator/
+.backup-before-fix/

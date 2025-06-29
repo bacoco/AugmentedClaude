@@ -1,0 +1,60 @@
+{
+  "model": "claude-3-5-sonnet-20241022",
+  "mcp_servers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "description": "Context7 - Up-to-date documentation for libraries and frameworks"
+    },
+    "sequential": {
+      "command": "npx", 
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Sequential thinking server for step-by-step problem solving"
+    },
+    "magic": {
+      "command": "npx",
+      "args": ["-y", "@magicuidesign/mcp"],
+      "description": "Magic UI components and effects for React applications"
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+      "description": "Browser automation using Puppeteer"
+    },
+    "perplexity": {
+      "command": "npx",
+      "args": ["-y", "perplexity-mcp"],
+      "description": "Web search functionality using Perplexity AI (requires API key)",
+      "disabled": true,
+      "note": "Requires PERPLEXITY_API_KEY environment variable"
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "description": "Web scraping with JavaScript rendering (requires API key)",
+      "disabled": true,
+      "note": "Requires FIRECRAWL_API_KEY environment variable"
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": ["-y", "@browsermcp/mcp"],
+      "description": "Browser automation and control"
+    },
+    "claude-flow": {
+      "command": "npx",
+      "args": ["-y", "claude-flow@latest"],
+      "description": "Claude Flow - Multi-agent orchestration, SPARC modes, swarm coordination",
+      "note": "Provides sparc, swarm, memory, task, and workflow commands"
+    }
+  },
+  "specialist_system": {
+    "enabled": true,
+    "auto_select": true,
+    "fallback_specialist": "@claude/agents/cognitive/architect.md"
+  },
+  "reference_system": {
+    "enabled": true,
+    "max_references": 7,
+    "cache_enabled": true
+  }
+}

@@ -1,0 +1,15 @@
+# AugmentedClaude Project Root
+
+This file marks the root of the AugmentedClaude project.
+It helps tools identify the project structure and locate resources.
+
+## Project Structure
+- `.claude/` - Complete SuperClaude environment with natural language orchestration
+
+## Reference Resolution
+When resolving @ references:
+1. Check relative to the current file
+2. Check relative to .claude/
+3. Check relative to project root
+
+The .claude directory contains all specialists, commands, patterns, workflows, and configurations.

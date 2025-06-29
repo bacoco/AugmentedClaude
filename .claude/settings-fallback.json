@@ -1,0 +1,85 @@
+{
+  "model": "claude-3-5-sonnet-20241022",
+  "mcp_servers": {
+    "_note": "This is a fallback configuration with all MCP servers disabled",
+    "_instructions": "Copy working servers from settings.json to enable them",
+    
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "description": "Context7 - Up-to-date documentation for libraries and frameworks",
+      "disabled": true,
+      "fallback_note": "Install with: npm install --save-dev @upstash/context7-mcp"
+    },
+    "sequential": {
+      "command": "npx", 
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Sequential thinking server for step-by-step problem solving",
+      "disabled": true,
+      "fallback_note": "Install with: npm install --save-dev @modelcontextprotocol/server-sequential-thinking"
+    },
+    "magic": {
+      "command": "npx",
+      "args": ["-y", "@magicuidesign/mcp"],
+      "description": "Magic UI components and effects for React applications",
+      "disabled": true,
+      "fallback_note": "Install with: npm install --save-dev @magicuidesign/mcp"
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+      "description": "Browser automation using Puppeteer",
+      "disabled": true,
+      "fallback_note": "Install with: npm install --save-dev @modelcontextprotocol/server-puppeteer"
+    },
+    "perplexity": {
+      "command": "npx",
+      "args": ["-y", "perplexity-mcp"],
+      "description": "Web search functionality using Perplexity AI",
+      "disabled": true,
+      "fallback_note": "Install with: npm install --save-dev perplexity-mcp",
+      "api_key_required": "PERPLEXITY_API_KEY",
+      "get_api_key": "https://www.perplexity.ai/settings/api"
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "description": "Web scraping with JavaScript rendering",
+      "disabled": true,
+      "fallback_note": "Install with: npm install --save-dev firecrawl-mcp",
+      "api_key_required": "FIRECRAWL_API_KEY",
+      "get_api_key": "https://firecrawl.dev/"
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": ["-y", "@browsermcp/mcp"],
+      "description": "Browser automation and control",
+      "disabled": true,
+      "fallback_note": "Install with: npm install --save-dev @browsermcp/mcp"
+    }
+  },
+  "specialist_system": {
+    "enabled": true,
+    "auto_select": true,
+    "fallback_specialist": "@claude/agents/cognitive/architect.md"
+  },
+  "reference_system": {
+    "enabled": true,
+    "max_references": 7,
+    "cache_enabled": true
+  },
+  "troubleshooting": {
+    "mcp_issues": {
+      "server_not_starting": "Check if the npm package is installed and the command path is correct",
+      "api_key_errors": "Ensure required API keys are set in environment variables",
+      "package_not_found": "Verify the package name and try reinstalling with npm",
+      "permission_errors": "Make sure packages are installed globally or in project scope"
+    },
+    "package_alternatives": {
+      "context7": "Use web search for documentation instead of automated Context7",
+      "perplexity": "Use direct web search or other search APIs",
+      "firecrawl": "Use built-in web fetch tools or manual web scraping",
+      "puppeteer": "Use built-in browser tools or manual testing"
+    }
+  }
+}

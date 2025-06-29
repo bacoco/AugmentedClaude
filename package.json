@@ -1,0 +1,58 @@
+{
+  "name": "augmented-claude",
+  "version": "3.0.0",
+  "description": "Natural language development assistant powered by SuperClaude and claude-flow",
+  "keywords": [
+    "claude",
+    "ai",
+    "mcp",
+    "natural-language",
+    "model-context-protocol",
+    "superclaude",
+    "orchestration"
+  ],
+  "author": "AugmentedClaude Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "claude",
+    "mcp:install": "npm install --save-optional claude-flow@latest",
+    "mcp:list": "claude mcp list"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.1.0"
+  },
+  "optionalDependencies": {
+    "claude-flow": "latest",
+    "@upstash/context7-mcp": "latest",
+    "@modelcontextprotocol/server-sequential-thinking": "latest",
+    "@magicuidesign/mcp": "latest",
+    "@modelcontextprotocol/server-puppeteer": "latest",
+    "@browsermcp/mcp": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bacoco/AugmentedClaude.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bacoco/AugmentedClaude/issues"
+  },
+  "homepage": "https://github.com/bacoco/AugmentedClaude#readme",
+  "augmentedClaude": {
+    "version": "3.0.0",
+    "structure": "superclaude-compatible",
+    "mcpServers": [
+      "claude-flow",
+      "context7", 
+      "sequential",
+      "magic",
+      "puppeteer",
+      "browsermcp",
+      "perplexity",
+      "firecrawl"
+    ],
+    "directory": ".claude"
+  }
+}
