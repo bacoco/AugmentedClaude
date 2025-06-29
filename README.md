@@ -22,8 +22,8 @@ An advanced AI orchestration system that integrates Claude Flow, SuperClaude, an
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/augmented-claude.git
-cd augmented-claude
+git clone https://github.com/bacoco/AugmentedClaude.git
+cd AugmentedClaude
 
 # Run the automated setup
 chmod +x setup.sh
