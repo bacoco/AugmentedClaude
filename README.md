@@ -109,6 +109,7 @@ AugmentedClaude/
     ├── workflows/        # Complex processes
     ├── memory/           # Context storage
     └── shared/           # Configuration
+```
 
 ## 🎯 Example Use Cases
 
