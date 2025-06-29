@@ -13,17 +13,27 @@ AugmentedClaude is a natural language interface for development tasks. Instead o
 
 ## Quick Start
 
-### Using Claude Code CLI (Recommended)
+### Method 1: Easy Install Script (Recommended)
+
+```bash
+# One-line install that handles everything
+curl -sSL https://raw.githubusercontent.com/bacoco/AugmentedClaude/main/install.sh | bash
+```
+
+This will check prerequisites, clone the repository, and set everything up for you.
+
+### Method 2: Manual Installation
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/[username]/AugmentedClaude.git
+   git clone https://github.com/bacoco/AugmentedClaude.git
    cd AugmentedClaude
    ```
 
 2. Start Claude Code:
    ```bash
    claude
+   # Or use our helper script: ./start.sh
    ```
 
 3. **Just talk naturally!** Examples:
@@ -166,6 +176,25 @@ You don't need to know:
 - Which specialist to use
 
 Just describe what you want to accomplish, and the orchestrator handles everything else.
+
+## Helper Scripts
+
+AugmentedClaude includes helpful scripts to make your experience even smoother:
+
+### `./install.sh`
+- One-command installation with prerequisite checking
+- Interactive setup with custom project naming
+- Automatic Claude CLI installation if needed
+
+### `./start.sh`
+- Quick start script that verifies your setup
+- Shows helpful tips and examples
+- Launches Claude with proper configuration
+
+### `./update.sh`
+- Updates AugmentedClaude to the latest version
+- Preserves your local changes
+- Updates dependencies if needed
 
 ## Troubleshooting
 

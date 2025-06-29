@@ -49,6 +49,25 @@ The orchestrator automatically translates your request into optimized commands.
    - "Create API documentation"
    - "Set up continuous integration"
 
+## ⚡ Quick Install
+
+For an even easier setup, use our installation script:
+
+```bash
+# One-line install (creates a new project)
+curl -sSL https://raw.githubusercontent.com/bacoco/AugmentedClaude/main/install.sh | bash
+
+# Or if you prefer wget
+wget -qO- https://raw.githubusercontent.com/bacoco/AugmentedClaude/main/install.sh | bash
+```
+
+The installer will:
+- Check all prerequisites (git, Node.js, Claude CLI)
+- Offer to install Claude CLI if needed
+- Clone the repository to a directory of your choice
+- Optionally install MCP dependencies
+- Provide clear next steps
+
 ## 🧠 How It Works
 
 1. **You describe** what you want in natural language
