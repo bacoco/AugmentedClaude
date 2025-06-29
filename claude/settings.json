@@ -1,0 +1,31 @@
+{
+  "model": "claude-3-5-sonnet-20241022",
+  "mcp_servers": {
+    "context7": {
+      "command": "npx",
+      "args": ["@context7/server"]
+    },
+    "sequential": {
+      "command": "npx", 
+      "args": ["@sequential-thinking/server"]
+    },
+    "magic": {
+      "command": "npx",
+      "args": ["@magic-ui/server"] 
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["@puppeteer-extra/server"]
+    }
+  },
+  "specialist_system": {
+    "enabled": true,
+    "auto_select": true,
+    "fallback_specialist": "@specialists/cognitive/architect.md"
+  },
+  "reference_system": {
+    "enabled": true,
+    "max_references": 7,
+    "cache_enabled": true
+  }
+}
