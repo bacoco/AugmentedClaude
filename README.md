@@ -30,28 +30,13 @@ The orchestrator automatically translates your request into optimized commands.
 - **[HOW_TO_USE.md](HOW_TO_USE.md)** - Complete guide with examples
 - **[CLAUDE.md](CLAUDE.md)** - Main configuration file
 
-## 🚀 Quick Start
+## 🚀 Installation
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/[username]/AugmentedClaude.git
-   cd AugmentedClaude
-   ```
+Choose one of these installation methods:
 
-2. **Start Claude Code**:
-   ```bash
-   claude
-   ```
+### Option 1: Automated Install (Recommended)
 
-3. **Just talk naturally**:
-   - "Build a user authentication system"
-   - "Find and fix performance issues"
-   - "Create API documentation"
-   - "Set up continuous integration"
-
-## ⚡ Quick Install
-
-For an even easier setup, use our installation script:
+Best for most users - handles all setup automatically:
 
 ```bash
 # One-line install (creates a new project)
@@ -67,6 +52,34 @@ The installer will:
 - Clone the repository to a directory of your choice
 - Optionally install MCP dependencies
 - Provide clear next steps
+
+### Option 2: Manual Install
+
+For users who want more control or are contributing to the project:
+
+1. **Clone the repository**:
+   ```bash
+   # For using the main repository:
+   git clone https://github.com/bacoco/AugmentedClaude.git
+   
+   # Or if you've forked the project:
+   git clone https://github.com/[your-username]/AugmentedClaude.git
+   
+   cd AugmentedClaude
+   ```
+
+2. **Start Claude Code**:
+   ```bash
+   claude
+   ```
+
+## 🎯 Getting Started
+
+Once installed, just talk naturally:
+- "Build a user authentication system"
+- "Find and fix performance issues"
+- "Create API documentation"
+- "Set up continuous integration"
 
 ## 🧠 How It Works
 
