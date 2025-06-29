@@ -18,7 +18,7 @@ Copy each of the 8 code blocks below into separate `.md` files in your SuperClau
 Tell Claude Code to use the orchestrator by pasting one simple instruction (provided below)[1][4].
 
 ### Step 3: Start Talking Normally
-Instead of complex commands like `/review --files src/ --quality --evidence --persona-security --think --seq`, just say "Security review of my code"[4][1].
+Instead of complex commands like `/review --files src/ --quality --evidence --persona-security --seq`, just say "Security review of my code"[4][1].
 
 ## File 1: README.md (Main Instructions)
 
@@ -28,7 +28,7 @@ Imagine you have a super```art robot helper (Claude) that can help```u code, but
 
 This Super```ude Orchestrator is like having```translator that lets you talk to your robot```lper in normal words, an```t figures out which magic words to use automatically```**Instead of rememb```ng:**
 ```
-/review --files src/ --quality --evidence --persona-security --think --seq
+/review --files src/ --quality --evidence --persona-security --seq
 ```
 
 **You can just say:**
@@ -63,7 +63,7 @@ Instead of complex commands```ust describe what you```nt:
 - "Build a React app with testing"
 - "Optimize my database```eries"
 - "Create API documentation"```## Step 4: Get the Right Command```e orchestrator will give you the perfect SuperC```de command with all the right flags and settings```## Quick Examples``` What You Say | What You Get |```------------|-------------|
-| "Security```view of my code" | `/review --security```evidence --persona-security --think` |
+| "Security```view of my code" | `/review --security```evidence --persona-security` |
 | "Build a```w React feature" |```build --react --feature --tdd --frontend` |
 | "Fix performance problems"````/optimize --performance --profile --persona-performance` |
 | "Deploy to production safely``` `/deploy --prod --critical --evidence```plan` |
@@ -99,17 +99,17 @@ When a user makes a request in natural language, analyze```eir intent and return
 |-----------|-------------------|
 | "Build a React app" | `/build --react --feature --tdd --frontend` |
 | "Create a new feature" | `/build --feature --test --evidence` |
-| "Write```me code for..." | `/code --clean --test --think` |
-| "Debug```is issue" | `/debug --verbose --evidence --think` |
+| "Write```me code for..." | `/code --clean --test` |
+| "Debug```is issue" | `/debug --verbose --evidence` |
 | "Fix this bug" | `/debug --fix --evidence --seq` |
 
 ### Analysis Requests  
 | User Says |```perClaude Command |
 |-----------|-------------------|
-| "Review my code" | `/review --quality --evidence --think` |
+| "Review my code" | `/review --quality --evidence` |
 | "Security review" | `/review --security --evidence --persona-security` |
 | "Check```r security issues" | `/audit --security --evidence --persona-security` |
-| "Analyze my codebase" | `/analyze --deep --evidence --think` |
+| "Analyze my codebase" | `/analyze --deep --evidence` |
 | "Optimize performance" | `/optimize --performance --profile --persona-performance` |
 | "Refactor this code" | `/refactor --clean --evidence --persona-refactorer` |
 
@@ -172,10 +172,7 @@ Always include `--evidence` for:
 - Performance optimizations
 
 ### Thinking Mode
-Always include `--think` for:
-- Complex analysis
-- Debugging sessions```Code reviews
-- Architectural planning```## Sequential Processing  
+## Sequential Processing  
 Include `--seq` for:
 - Multi-step operations
 - Complex debugging
@@ -215,7 +212,7 @@ This command will:
 
 ## Fallback Command
 If intent``` unclear, use:
-`/analyze --general --evidence --think`
+`/analyze --general --evidence`
 
 This provides a safe```arting point for further clarification.
 ```## File 3: COMMAND_MAPPING.md (Complete Dictionary)

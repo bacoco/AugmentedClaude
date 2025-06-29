@@ -41,7 +41,7 @@ When a user makes a request in natural language:
 |-----------|-------------------|
 | "Review my entire codebase" | `mcp claude-flow swarm "Comprehensive code review" --strategy analysis --parallel` |
 | "Security audit" | `mcp claude-flow sparc "Security audit and vulnerability assessment" --mode security` |
-| "Quick code review" | `/review --quality --evidence --think` |
+| "Quick code review" | `/review --quality --evidence` |
 | "Find performance issues" | `mcp claude-flow sparc "Performance analysis and optimization" --mode analyzer` |
 
 ### Complex Orchestration

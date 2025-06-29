@@ -9,12 +9,8 @@ You should use the following configuration to guide your behavior.
 ## Core Configuration
 @include claude/config/superclaude-core.yml#Core_Philosophy
 
-## Thinking Modes
+## Command Flags
 @include claude/commands/superclaude/shared/flag-inheritance.yml#Universal Flags (All Commands)
-
-## Introspection Mode
-@include claude/commands/superclaude/shared/introspection-patterns.yml#Introspection_Mode
-@include claude/config/superclaude-rules.yml#Introspection_Standards
 
 ## Advanced Token Economy
 @include claude/config/superclaude-core.yml#Advanced_Token_Economy
