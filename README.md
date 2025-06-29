@@ -153,6 +153,15 @@ The orchestrator automatically translates your natural language into optimized c
 
 Contributions welcome! The orchestrator can be extended with new patterns, workflows, and integrations.
 
+## 🙏 Acknowledgments & Credits
+
+This project integrates and builds upon the excellent work of:
+
+- **[SuperClaude](https://github.com/Ejb503/SuperClaude)** - The powerful command framework that powers our natural language orchestration. All SuperClaude code has been integrated into the `.claude/` directory structure.
+- **[claude-flow](https://github.com/pchaganti/ai-claude-flow)** - Multi-agent orchestration capabilities available through MCP server integration.
+
+Special thanks to the creators and contributors of these projects for their innovative approaches to AI-assisted development.
+
 ## 📄 License
 
 MIT License - see LICENSE file for details.

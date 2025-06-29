@@ -7,9 +7,9 @@ AugmentedClaude is a natural language interface for development tasks. Instead o
 ## Prerequisites
 
 - **Claude Access**: Either through claude.ai web interface or Claude Code CLI
-- **Claude Code CLI** (recommended): For MCP server features
-- **SuperClaude** (optional): Will be installed automatically if needed
-- **claude-flow** (optional): Available as MCP server in Claude Code
+- **Claude Code CLI** (required): For full functionality and MCP server features
+- **No additional installations needed**: SuperClaude framework is already integrated into this project
+- **claude-flow**: Available as MCP server through Claude Code's MCP integration
 
 ## Quick Start
 
