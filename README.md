@@ -13,9 +13,9 @@ An advanced AI orchestration system that integrates Claude Flow, SuperClaude, an
 
 ## 📋 Prerequisites
 
+- Claude Code CLI (required) - Install from https://claude.ai/code
 - Node.js (v16 or higher)
 - Git
-- Claude Code CLI (optional but recommended)
 - Python 3 (optional for orchestrator)
 
 ## 🛠️ Installation

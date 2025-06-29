@@ -74,8 +74,10 @@ check_prerequisites() {
     if command -v claude &> /dev/null; then
         print_success "Claude Code CLI installed"
     else
-        print_warning "Claude Code CLI not found (optional)"
-        echo "Install from: https://claude.ai/code"
+        print_error "Claude Code CLI is REQUIRED"
+        echo "Please install Claude Code from: https://claude.ai/code"
+        echo "This system is built specifically for Claude Code"
+        missing_deps=1
     fi
     
     if [ $missing_deps -eq 1 ]; then
