@@ -30,6 +30,8 @@ echo ""
 # Check if running through pipe (non-interactive)
 if [ ! -t 0 ]; then
     echo -e "${YELLOW}Note: Running in non-interactive mode${NC}"
+    # Set defaults for non-interactive mode
+    export PROJECT_DIR="$DEFAULT_DIR"
 fi
 
 # Function to check if a command exists
@@ -116,7 +118,7 @@ if [ -t 0 ]; then
     read -p "Enter project directory name [$DEFAULT_DIR]: " PROJECT_DIR
     PROJECT_DIR=${PROJECT_DIR:-$DEFAULT_DIR}
 else
-    PROJECT_DIR=$DEFAULT_DIR
+    # Already set in non-interactive check above
     echo "Using default directory: $PROJECT_DIR"
 fi
 
@@ -139,10 +141,12 @@ fi
 
 # Clone repository
 echo -e "${BLUE}Cloning AugmentedClaude repository...${NC}"
-git clone "$REPO_URL" "${PROJECT_DIR:-$DEFAULT_DIR}"
+TARGET_DIR="${PROJECT_DIR:-$DEFAULT_DIR}"
+echo "Installing to: $TARGET_DIR"
+git clone "$REPO_URL" "$TARGET_DIR"
 
 # Enter directory
-cd "${PROJECT_DIR:-$DEFAULT_DIR}"
+cd "$TARGET_DIR"
 
 # Optional npm install
 echo ""
@@ -167,7 +171,7 @@ echo ""
 echo -e "${GREEN}🎉 AugmentedClaude installation complete!${NC}"
 echo ""
 echo -e "${BLUE}Next steps:${NC}"
-echo -e "1. ${YELLOW}cd ${PROJECT_DIR:-$DEFAULT_DIR}${NC}"
+echo -e "1. ${YELLOW}cd $TARGET_DIR${NC}"
 echo -e "2. ${YELLOW}claude${NC}"
 echo -e "3. Start using natural language commands like:"
 echo -e "   - ${GREEN}\"Build a React dashboard\"${NC}"
