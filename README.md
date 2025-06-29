@@ -1,5 +1,7 @@
 # AugmentedClaude 🚀
 
+![AugmentedClaude](image.webp)
+
 **Just describe what you want to build. No commands to memorize.**
 
 AugmentedClaude is a natural language interface that transforms how you work with AI for development. Simply describe your task in plain English, and the orchestrator handles everything else.
